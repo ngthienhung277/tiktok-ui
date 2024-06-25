@@ -1,5 +1,5 @@
 @import 'normalize.css';
-@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap');
+
 :root {
     --primary: #fe2c55;
     --black: #000;
@@ -38,8 +38,35 @@ html{
     font-size: 62.5%;
 }
 
+//Fonts embeded
+@font-face {
+    font-family: DMSans;
+    src: url('../../assets/fonts/DM Sans regular.woff2' );
+    font-weight: 400;
+}
+@font-face {
+    font-family: TikTokDisplayFont;
+    src: url('../../assets/fonts/TikTok Display Font Bold.woff2');
+    font-weight: 600;
+}
+@font-face {
+    font-family: TikTokFontBold;
+    src: url('../../assets/fonts/TikTokFont Bold.woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: TikTokFontSemiBold;
+    src: url('../../assets/fonts/TikTokFont Semibold.woff2');
+    font-weight: 700;
+}
+@font-face {
+    font-family: TikTokFontRegular;
+    src: url('../../assets/fonts/TikTokFont Regular.woff2');
+    font-weight: 700;
+}
+// Custom tippy tooltip
 body {
-    font-family: 'Roboto', sans-serif;
+    font-family: 'TikTokFontRegular', sans-serif;
     font-size: 1.6rem;
     line-height:1.5;
     text-rendering: optimizeSpeed;
