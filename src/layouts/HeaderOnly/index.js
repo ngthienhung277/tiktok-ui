@@ -1,11 +1,11 @@
-import Header from "~/components/Layout/components/Header";
+import Header from '~/layouts/components/Header';
 
 function HeaderOnly({ children }) {
-    return ( 
+    return (
         <div>
             <Header />
             <div className="container">
-            <div className="content"> {children}</div>
+                <div className="content">{children}</div>
             </div>
         </div>
     );
