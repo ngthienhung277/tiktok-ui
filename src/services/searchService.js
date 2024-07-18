@@ -6,6 +6,7 @@ export const search = async (q, type = 'less') => {
             params: {
                 q,
                 type,
+                page
             },
         });
         return res.data;

@@ -5,7 +5,7 @@ import DefaultLayout from '~/layouts';
 
 function App() {
     return (
-        <Router>
+        <Router basename='tiktok-ui'>
             <div className="App">
                 <Routes>
                     {publicRoutes.map((route, index) => {
@@ -20,6 +20,7 @@ function App() {
 
                         return (
                             <Route
+                                exact
                                 key={index}
                                 path={route.path}
                                 element={

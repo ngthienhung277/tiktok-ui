@@ -9,4 +9,14 @@ export const get = async (path, options = {}) => {
     return response.data;
 };
 
+export const post = async (path, body = {}, options = {}) => {
+    const response = await httpRequest.post(path, body, options);
+    return response.data;
+};
+
+export const DELETE = async (path, data, options = {}) => {
+    const response = await httpRequest.delete(path, options);
+    return response.data;
+};
+
 export default httpRequest;

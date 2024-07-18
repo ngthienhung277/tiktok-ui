@@ -1,52 +1,111 @@
-// Menu wrapper
-.menu-list {
-    width: 224px;
-
-    .menu-item {
-        margin-left: 0;
-    }
-}
-
-.menu-popper{
-    padding-bottom: 8px;
-}
-.menu-body {
-    overflow-y: auto;
-}
-//Menu items
 .menu-item {
-    width: 100%;
-    justify-content: flex-start;
-    border-radius: 0;
-    padding: 11px 16px;
-    line-height: 1.8rem;
-    font-weight: 600;
+    display: flex;
+    align-items: center;
+    padding: 8px;
+    font-size: 1.8rem;
+    font-weight: 700;
+    border-radius: 4px;
+    color: var(--text-color);
+    transition: background-color ease-in-out 200ms;
 
-    &.separate {
-        border-top: 1px solid rgba(22, 24, 35, 0.12);
+    &.active {
+        color: var(--primary);
+
+        .icon {
+            display: none;
+        }
+
+        .active-icon {
+            display: flex;
+        }
     }
+
     &:hover {
-        background: rgba(22, 24, 35, 0.03);
+        background-color: rgba(22, 24, 35, 0.03);
     }
 }
-// Header menu
-.header {
-    position: relative;
-    flex-shrink: 0;
-    height: 50px;
-    margin-top: -8px;
+
+.title {
+    margin-left: 10px;
 }
 
-.back-btn {
-    width: 50px;
-    height: 100%;
-    background-color: transparent;
-    cursor: pointer;
-} 
+.icon,
+.active-icon {
+    display: flex;
+}
 
-.header-title {
+.active-icon {
+    display: none;
+}
+
+.lock-scroll {
+    overflow: hidden;
+}
+
+.more-tab{
+    margin-left: 0;
+    min-width: 223px;
+
+    p{
+        padding-bottom: 8px;
+    }
+
+    .more-list{
+        padding: 8px 0;
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .list-body {
+        overflow-y: auto;
+    }
+
+    .more-item {
+        padding:10px 16px;
+        display: flex;
+        width: 100%;
+        font-weight: 16px;
+        line-height: 22px;
+        color:black;
+        cursor: pointer;
+
+        &.separate {
+            border-top: 1px solid rgba(22, 24, 35, 0.12);
+        }
+
+        span {
+            display: flex;
+        }
+
+        &:hover {
+            background: rgba(22, 24, 35, 0.03);
+        }
+    }
+    svg {
+        width: 20px;
+        height: 20px;
+        margin: 2px 8px 0 0;
+    }
+    
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    position: relative;
+}
+
+.back-icon {
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    padding: 0 20px;
+}
+
+.title {
     position: absolute;
-    top: 50%;
     left: 50%;
+    top: 50%;
     transform: translate(-50%, -50%);
 }
